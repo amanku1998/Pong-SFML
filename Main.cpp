@@ -29,13 +29,16 @@ int main()
     // Initialize the window
     gameWindowManager.initialize();
 
-    while (gameWindowManager.isGameRunning()) {
-        gameWindowManager.render();
-    }
-
+    // Create the EventManager instance
     EventManager eventManager;
 
-    eventManager.pollEvents(gameWindowManager.getGameWindow());
+    while (gameWindowManager.isGameRunning()) {
+
+        // Poll and handle events
+        eventManager.pollEvents(gameWindowManager.getGameWindow());
+
+        gameWindowManager.render();
+    }
 
     return 0;
 }
