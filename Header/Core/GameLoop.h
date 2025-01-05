@@ -2,21 +2,24 @@
 #include <SFML/Graphics.hpp>
 #include "../../Header/Core/GameWindowManager.h"
 #include "../../Header/Event/EventManager.h"
+#include "../../Header/GamePlay/GamePlayManager.h"
 
 using namespace sf;
 using namespace Core;
 //using namespace Event;
 using namespace std;
+using namespace Gameplay;
 
 namespace Core
 {
 	class GameLoop
 	{
-	private:
+		private:
 		GameWindowManager* game_window_manager;
 		EventManager* event_manager;
+		GameplayManager* gameplay_manager;
 
-	public:
+		public:
 		void initialize();
 
 		bool isGameRunning();
