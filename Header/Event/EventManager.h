@@ -11,7 +11,7 @@ private :
 public:
 	void pollEvents(RenderWindow* game_window);
 
-	void isKeyPressed(sf::Keyboard::Key key);
+	bool isKeyPressed(sf::Keyboard::Key key);
 
 	bool isLeftMouseButtonClicked();
 };

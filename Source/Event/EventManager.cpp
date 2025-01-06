@@ -15,9 +15,15 @@ void EventManager::pollEvents(sf::RenderWindow* game_window) {
     }
 }
 
-void EventManager::isKeyPressed(sf::Keyboard::Key key)
+bool EventManager::isKeyPressed(sf::Keyboard::Key key)
 {
+    //
+    //std::cout << "isKeyPressed: " << isKeyPressed(key) << std::endl;
+    //return sf::Keyboard::isKeyPressed(key); // Assuming you're using SFML
 
+    bool keyState = sf::Keyboard::isKeyPressed(key); // Check the key state
+    std::cout << "isKeyPressed: " << key << " -> " << keyState << std::endl; // Log the key state
+    return keyState;
 }
 
 bool EventManager::isLeftMouseButtonClicked()
