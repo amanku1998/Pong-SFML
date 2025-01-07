@@ -138,6 +138,7 @@
     <ClCompile Include="Source\Core\GameWindowManager.cpp" />
     <ClCompile Include="Source\Event\EventManager.cpp" />
     <ClCompile Include="Source\GamePlay\Ball\Ball.cpp" />
+    <ClCompile Include="Source\GamePlay\Boundary\Boundary.cpp" />
     <ClCompile Include="Source\GamePlay\GamePlayManager.cpp" />
     <ClCompile Include="Source\GamePlay\Paddle\Paddle.cpp" />
   </ItemGroup>
@@ -146,6 +147,7 @@
     <ClInclude Include="Header\Core\GameWindowManager.h" />
     <ClInclude Include="Header\Event\EventManager.h" />
     <ClInclude Include="Header\GamePlay\Ball\Ball.h" />
+    <ClInclude Include="Header\GamePlay\Boundary\Boundary.h" />
     <ClInclude Include="Header\GamePlay\GamePlayManager.h" />
     <ClInclude Include="Header\GamePlay\Paddle\Paddle.h" />
   </ItemGroup>
