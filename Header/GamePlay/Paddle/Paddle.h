@@ -12,7 +12,7 @@ namespace Gameplay
         const float paddle_width = 20.0f;
         const float paddle_height = 140.0f;
 
-        const float paddleSpeed = 5.0f;
+        const float paddleSpeed = 0.8f;
 
         void movePaddle(bool move_up_key_pressed, bool move_down_key_pressed);
 

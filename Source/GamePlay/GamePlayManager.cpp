@@ -1,4 +1,5 @@
 #include "../../Header/GamePlay/GamePlayManager.h"
+#include <iostream>
 using namespace sf;
 
 namespace Gameplay
@@ -7,22 +8,10 @@ namespace Gameplay
 	//	initialize();
 	//}
 
-	//GameplayManager::GameplayManager(EventManager* manager)
-	//{
-	//	//initialize();
-	//	event_manager = manager;
-	//}
-
-	GameplayManager::GameplayManager()
-	{
-		event_manager = nullptr; // Ensure it's null if not explicitly set
-		initialize();
-	}
-
 	GameplayManager::GameplayManager(EventManager* manager)
-		: event_manager(manager) // Initialize event_manager directly
 	{
 		initialize();
+		event_manager = manager;
 	}
 
 	void GameplayManager::initialize() {
@@ -40,11 +29,12 @@ namespace Gameplay
 
 	void GameplayManager::update()
 	{
+		ball->update();
 		//previous code
-		player1->update(event_manager->isKeyPressed(sf::Keyboard::W),
-						event_manager->isKeyPressed(sf::Keyboard::S));
-		player2->update(event_manager->isKeyPressed(sf::Keyboard::Up),
-						event_manager->isKeyPressed(sf::Keyboard::Down));
+		player1->update(event_manager->isKeyPressed(Keyboard::W),
+						event_manager->isKeyPressed(Keyboard::S));
+		player2->update(event_manager->isKeyPressed(Keyboard::Up),
+						event_manager->isKeyPressed(Keyboard::Down));
 	}
 
 }

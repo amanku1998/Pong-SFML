@@ -30,7 +30,6 @@ namespace Gameplay
 
     void Paddle::update(bool move_up_key_pressed, bool move_down_key_pressed)
     {
-        std::cout << "Move Up: " << move_up_key_pressed << ", Move Down: " << move_down_key_pressed << std::endl;
         movePaddle(move_up_key_pressed, move_down_key_pressed);
     }
 }

@@ -24,7 +24,7 @@ namespace Gameplay
 
 		public:
 
-		GameplayManager();
+		//GameplayManager();
 		GameplayManager(EventManager* manager);
 		void update();
 		void render(RenderWindow* game_window);
