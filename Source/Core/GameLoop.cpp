@@ -19,6 +19,7 @@ namespace Core
 	}
 
 	void GameLoop::update() {
+		//used for ball & keboard detection for player
 		gameplay_manager->update();
 	}
 

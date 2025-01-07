@@ -41,17 +41,16 @@ namespace Gameplay
             const float vertical_boundary_width = 20.0f;
             const float vertical_boundary_height = 720.0f;
 
-
-            //Boundary Colors
-            const Color boundary_color = Color::Blue;
-            const Color center_line_color = Color::White;
-
             //center lines properties
             const float center_line_width = 10.0f;
             const float center_line_height = 680.0f;
 
             const float center_line_position_x = 640.0f;
             const float center_line_position_y = 20.0f;
+
+            //Boundary Colors
+            const Color boundary_color = Color::Blue;
+            const Color center_line_color = Color::White;
 
             //create boundaries and the center line
             void createTopBoundary();
