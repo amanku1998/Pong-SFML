@@ -6,6 +6,12 @@ using namespace std;
 
 namespace Gameplay
 {
+    enum class BallState
+    {
+        Idle,
+        Moving
+    };
+
     class Ball
     {
         private:
@@ -22,7 +28,7 @@ namespace Gameplay
             const float position_x = 615.0f;
             const float position_y = 335.0f;
 
-            float ball_speed = .5f;
+            float ball_speed = 40.0f;
             Vector2f velocity = Vector2f(ball_speed, ball_speed);
 
             const float top_boundary = 20.0f;
@@ -35,14 +41,24 @@ namespace Gameplay
             const float center_position_x = 615.0f;
             const float center_position_y = 325.0f;
 
+            float speed_multiplier = 10.0f;
+
+            float delay_duration = 2.0f;
+            float elapsed_delay_time = 0.0f;
+
+            BallState current_state = BallState::Idle;
+
+            void move(TimeService* timeService);
+            void updateDelayTime(float deltaTime);
+
             void loadTexture();
             void initializeVariables();
 
         public:
 
             Ball();
-            void update(Paddle* player1, Paddle* player2);
-            void move();
+            void update(Paddle* player1, Paddle* player2, TimeService* time_service);
+            //void move(TimeService* time_service);
             void handlePaddleCollision(Paddle* player1, Paddle* player2);
             void handleBoudaryCollision();
             void reset();

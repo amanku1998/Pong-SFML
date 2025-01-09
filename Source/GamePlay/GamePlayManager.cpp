@@ -11,8 +11,10 @@ namespace Gameplay
 
 	GameplayManager::GameplayManager(EventManager* manager)
 	{
-		boundary = new Boundary();
+		time_service = new TimeService();
+		time_service->initialize();// Start our time tracking
 
+		boundary = new Boundary();
 		initialize();
 		event_manager = manager;
 	}
@@ -33,12 +35,13 @@ namespace Gameplay
 
 	void GameplayManager::update()
 	{
-		ball->update(player1,player2);
+		time_service->update();
+		ball->update(player1,player2, time_service);
 		//previous code
 		player1->update(event_manager->isKeyPressed(Keyboard::W),
-						event_manager->isKeyPressed(Keyboard::S));
+						event_manager->isKeyPressed(Keyboard::S), time_service);
 		player2->update(event_manager->isKeyPressed(Keyboard::Up),
-						event_manager->isKeyPressed(Keyboard::Down));
+						event_manager->isKeyPressed(Keyboard::Down), time_service);
 	}
 
 }
