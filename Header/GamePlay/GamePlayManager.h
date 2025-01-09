@@ -3,6 +3,7 @@
 #include "Ball/Ball.h"
 #include "../../Header/Event/EventManager.h"
 #include "../../Header/GamePlay/Boundary/Boundary.h"
+#include "../../Header/UI/UIService.h"
 #include "../Utility/TimeService.h"
 
 using namespace Utility;
@@ -26,6 +27,7 @@ namespace Gameplay
 		Boundary* boundary;
 
 		TimeService* time_service;
+		UIService* ui_service = new UIService;
 
 		void initialize();
 
