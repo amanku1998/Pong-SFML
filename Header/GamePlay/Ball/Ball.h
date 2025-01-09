@@ -1,8 +1,10 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "../../Header/Gameplay/Paddle/Paddle.h"
+#include "../../Header/Utility/TimeService.h"
 using namespace sf;
 using namespace std;
+using namespace Utility;
 
 namespace Gameplay
 {
@@ -48,6 +50,9 @@ namespace Gameplay
 
             BallState current_state = BallState::Idle;
 
+            bool had_left_collison = false;
+            bool had_right_collison = false;
+
             void move(TimeService* timeService);
             void updateDelayTime(float deltaTime);
 
@@ -64,6 +69,12 @@ namespace Gameplay
             void reset();
             void handleOutofBoundCollision();
             void onCollision(Paddle* player1, Paddle* player2);
+
+            bool isLeftCollisionOccurred();
+            void updateLeftCollisionState(bool value);
+
+            bool isRightCollisionOccurred();
+            void updateRightCollisionState(bool value);
             void render(RenderWindow* game_window);
     };
 }

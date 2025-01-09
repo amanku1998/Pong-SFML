@@ -36,6 +36,8 @@ namespace Gameplay
 		//GameplayManager();
 		GameplayManager(EventManager* manager);
 		void update();
+		void UpdateScore();
+		void resetPlayers();
 		void render(RenderWindow* game_window);
 	};
 }

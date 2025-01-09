@@ -33,6 +33,11 @@ namespace Gameplay
         movePaddle(move_up_key_pressed, move_down_key_pressed, time_service);
     }
 
+    void Paddle::reset(float position_x, float position_y)
+    {
+        paddle_sprite.setPosition(position_x, position_y);
+    }
+
     RectangleShape Paddle::getPaddleSprite()
     {
         return paddle_sprite;
