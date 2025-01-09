@@ -36,3 +36,24 @@ void UIService::render(RenderWindow* game_window)
     game_window->draw(left_score_text);
     game_window->draw(right_score_text);
 }
+
+std::string UIService::formatScore(int score)
+{
+    return (score < 10 ? "0" : "") + std::to_string(score);
+}
+
+void UIService::incrementPlayer1Score()
+{
+    player1_score++;
+}
+
+void UIService::incrementPlayer2Score()
+{
+    player2_score++;
+}
+
+void UIService::update()
+{
+    left_score_text.setString(formatScore(player1_score));
+    right_score_text.setString(formatScore(player2_score));
+}

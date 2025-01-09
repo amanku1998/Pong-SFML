@@ -31,5 +31,9 @@ class UIService
     void loadFontTexture();
     void createLeftScoreText();
     void createRightScoreText();
+    std::string formatScore(int score);
+    void incrementPlayer1Score();
+    void incrementPlayer2Score();
+    void update();
     void render(RenderWindow* game_window);
 };
