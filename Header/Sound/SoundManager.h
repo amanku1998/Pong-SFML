@@ -13,11 +13,12 @@ namespace Sound
     {
     private:
         static sf::Music backgroundMusic;
+        static const std::string bgmPath;
+        static float backgroundMusicVolume;
+
         static sf::Sound soundEffect;
         static sf::SoundBuffer ballBounce;
 
-        static float backgroundMusicVolume;
-        static const std::string bgmPath;
         static const std::string ballBouncePath;
 
         void Initialize();
