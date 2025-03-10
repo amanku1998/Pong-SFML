@@ -22,7 +22,7 @@ namespace Gameplay
             const float left_position_y = 0.0f;
 
             // Right boundary
-            const float right_position_x = 1280.0f;
+            const float right_position_x = 1260.0f;
             const float right_position_y = 0.0f;
 
             //horizontal
