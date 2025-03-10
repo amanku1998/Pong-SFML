@@ -134,6 +134,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Source\Core\GameLoop.cpp" />
+    <ClCompile Include="Source\Core\GameWindowManager.cpp" />
+    <ClCompile Include="Source\Event\EventManager.cpp" />
+    <ClCompile Include="Source\GamePlay\Ball\Ball.cpp" />
+    <ClCompile Include="Source\GamePlay\Boundary\Boundary.cpp" />
+    <ClCompile Include="Source\GamePlay\GamePlayManager.cpp" />
+    <ClCompile Include="Source\GamePlay\Paddle\Paddle.cpp" />
+    <ClCompile Include="Source\Sound\SoundManager.cpp" />
+    <ClCompile Include="Source\UI\UIService.cpp" />
+    <ClCompile Include="Source\Utility\TimeService.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header\Core\GameLoop.h" />
+    <ClInclude Include="Header\Core\GameWindowManager.h" />
+    <ClInclude Include="Header\Event\EventManager.h" />
+    <ClInclude Include="Header\GamePlay\Ball\Ball.h" />
+    <ClInclude Include="Header\GamePlay\Boundary\Boundary.h" />
+    <ClInclude Include="Header\GamePlay\GamePlayManager.h" />
+    <ClInclude Include="Header\GamePlay\Paddle\Paddle.h" />
+    <ClInclude Include="Header\Sound\SoundManager.h" />
+    <ClInclude Include="Header\UI\UIService.h" />
+    <ClInclude Include="Header\Utility\TimeService.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
